@@ -34,11 +34,11 @@ struct PaioDiScarpe {
 
 const int paioDiScarpeSize=10;
 // dichiarazione dei vettori di tipo PaioDiScarpe (nuovo tipo di dato della struct) 
-PaioDiScarpe scaffaleNike[10];
-PaioDiScarpe scaffaleConverse[10];
-PaioDiScarpe scaffaleAdidas[10];
-PaioDiScarpe scaffaleVans[10];
-PaioDiScarpe scaffaleDiadora[10];
+PaioDiScarpe scaffaleNike[paioDiScarpeSize];
+PaioDiScarpe scaffaleConverse[paioDiScarpeSize];
+PaioDiScarpe scaffaleAdidas[paioDiScarpeSize];
+PaioDiScarpe scaffaleVans[paioDiScarpeSize];
+PaioDiScarpe scaffaleDiadora[paioDiScarpeSize];
 
 void stampaMagazzino();
 void applicaSconto(int sconto, char scaffale);
@@ -51,7 +51,7 @@ int main()
 {
 	// procedura per inizializzare gli array PaioDiScarpe
 	int i;	
-	for(i=0; i<10; i++) {
+	for(i=0; i<paioDiScarpeSize; i++) {
 	
 		//Inizializzazione dello scaffale delle scarpe di marca Nike
 		scaffaleNike[i].codiceIdentificativo[0] = 'N'; // inizializzando il campo della struct, codiceIdentificativo, avente come iniziale 'N' e seguito da un numero da 0 a 9.
@@ -251,7 +251,7 @@ int ricercaBinaria(char *chiave, PaioDiScarpe *scaffale) {
 
 /* Funzione adatta all'implementazione della ricerca del paio di scarpe ,riconosciuto mediante codice identificativo.
 * Si presuppone che nel caso in cui un paio di scarpe ,ricercato mediante il suo codice identificativo, venga venduto
-* esso sia immediatamente sostituito con uno stesso paio : cio� con stesso codice identificativo.
+* esso sia immediatamente sostituito con uno stesso paio : cioè con stesso codice identificativo.
 * Si inizia nella progettazione di una funzione che dato un codice identificativo richiesto dal cliente, permetta di ricercare e vendere quel paio richiesto 
 * e ne permetta la sostituzione immediata nello scaffale dato.
 */
